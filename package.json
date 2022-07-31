@@ -20,7 +20,9 @@
     "react-dom": "17.0.2",
     "react-hot-toast": "^2.2.0",
     "react-icons": "^4.3.1",
-    "stripe": "^8.209.0"
+    "react-whatsapp-component": "^1.0.3",
+    "stripe": "^8.209.0",
+    "whatsapp": "^1.0.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.18.6",

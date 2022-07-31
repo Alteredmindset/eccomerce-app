@@ -7,9 +7,15 @@ body, * {
   box-sizing: border-box;
   
 
+
 }
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+.App1{
+  font-family: sans-serif;
+  text-align: center;
 }
 
 a {
