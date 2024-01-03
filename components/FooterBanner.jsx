@@ -1,9 +1,38 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import { useRouter } from 'next/router'
+import { urlFor } from '../lib/client'
 
-import { urlFor } from '../lib/client';
+const FooterBanner = ({
+  footerBanner: {
+    discount,
+    largeText1,
+    largeText2,
+    saleTime,
+    smallText,
+    midText,
+    desc,
+    product,
+    buttonText,
+    image,
+    link,
+  },
+  products,
+}) => {
+  console.log('Link:', link)
 
-const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTime, smallText, midText, desc, product, buttonText, image } }) => {
+  const router = useRouter()
+
+  const selectedProduct = products.find(prod => prod.name === product)
+
+  const handleButtonClick = () => {
+    console.log('handleButtonClick called');
+    if (selectedProduct && selectedProduct.link) {
+      console.log('Navigating to:', selectedProduct.link);
+      router.push(selectedProduct.link);
+    }
+  };
+  
+
   return (
     <div className="footer-banner-container">
       <div className="banner-desc">
@@ -17,14 +46,12 @@ const FooterBanner = ({ footerBanner: { discount, largeText1, largeText2, saleTi
           <p>{smallText}</p>
           <h3>{midText}</h3>
           <p>{desc}</p>
-          <Link href={`/product/${product}`}>
-            <button type="button">{buttonText}</button>
-          </Link>
+          <button type="button" onClick={handleButtonClick}>
+            Go to
+          </button>
         </div>
 
-        <img 
-          src={urlFor(image)} className="footer-banner-image"
-        />
+        <img src={urlFor(image)} className="footer-banner-image" />
       </div>
     </div>
   )

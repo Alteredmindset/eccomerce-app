@@ -4,7 +4,7 @@
     "name": "ecommerce"
   },
   "api": {
-    "projectId": "26uxqjd7",
+    "projectId": "pb8lzqs5",
     "dataset": "production"
   },
   "plugins": [
@@ -15,9 +15,7 @@
   ],
   "env": {
     "development": {
-      "plugins": [
-        "@sanity/vision"
-      ]
+      "plugins": ["@sanity/vision"]
     }
   },
   "parts": [

@@ -56,5 +56,10 @@ export default {
             title: 'SaleTime',
             type: 'string',
         },
+        {
+            name: 'link',
+            title: 'Link',
+            type: 'string',
+        },
     ],
   };
