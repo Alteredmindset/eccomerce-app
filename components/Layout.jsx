@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         <Sidebar />
       </div>
       <Head>
-        <title>JS Mastery Store</title>
+        <title>Ruggmobile Imports Store</title>
       </Head>
       <header>
         <Navbar />
