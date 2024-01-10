@@ -1,34 +1,34 @@
-import React, { useState } from 'react';
-import { IoSearchCircleOutline, IoClose } from 'react-icons/io5';
+import React, { useState } from 'react'
+import { IoSearchCircleOutline, IoClose } from 'react-icons/io5'
 
 const SearchInput = () => {
-  const [query, setQuery] = useState('');
-  const [isMenuToggled, setIsMenuToggled] = useState(false);
+  const [query, setQuery] = useState('')
+  const [isMenuToggled, setIsMenuToggled] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    window.location.href = `/search?query=${query}`;
-  };
+  const handleSubmit = e => {
+    e.preventDefault()
+    window.location.href = `/search?query=${query}`
+  }
 
-  const handleIconClick = (e) => {
-    e.stopPropagation();
-    setIsMenuToggled(!isMenuToggled);
+  const handleIconClick = e => {
+    e.stopPropagation()
+    setIsMenuToggled(!isMenuToggled)
     // Optionally focus on the input when the icon is clicked
     // document.getElementById('popup-search').focus();
-  };
+  }
 
-  const handleInputClick = (e) => {
-    e.stopPropagation();
-  };
+  const handleInputClick = e => {
+    e.stopPropagation()
+  }
 
   const handleMenuClick = () => {
-    setIsMenuToggled(false);
-  };
+    setIsMenuToggled(false)
+  }
 
-  const handleCloseButtonClick = (e) => {
-    e.stopPropagation();
-    setIsMenuToggled(false);
-  };
+  const handleCloseButtonClick = e => {
+    e.stopPropagation()
+    setIsMenuToggled(false)
+  }
 
   return (
     <div>
@@ -46,10 +46,10 @@ const SearchInput = () => {
               placeholder="Search for a user"
               onClick={handleInputClick}
               value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              onChange={e => setQuery(e.target.value)}
             />
             <button id="popup-search-button" type="submit" name="search">
-              <i className="ion-ios-search-strong"></i>
+              <i className="ion-ios-search-strong">Enter</i>
             </button>
             <button
               id="close-button"
@@ -64,10 +64,10 @@ const SearchInput = () => {
 
       <IoSearchCircleOutline id="search-icon" onClick={handleIconClick} />
     </div>
-  );
-};
+  )
+}
 
-export default SearchInput;
+export default SearchInput
 
 // <form className="forminput" onSubmit={handleSubmit}>
 // <input
