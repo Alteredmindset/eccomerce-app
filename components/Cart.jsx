@@ -8,7 +8,7 @@ import {
 } from 'react-icons/ai'
 import { TiDeleteOutline } from 'react-icons/ti'
 import { toast } from 'react-hot-toast'
-import getStripe from '../Lib/getStripe'
+
 import sanityClient from '@sanity/client'
 import { useStateContext } from '../context/StateContext'
 import { urlFor } from '../Lib/client'
