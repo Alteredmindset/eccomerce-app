@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import { client } from '../lib/client'
-import { Product, FooterBanner, HeroBanner, Sidebar } from '../components'
+import { Product, FooterBanner, HeroBanner } from '../components'
 
 const Home = ({ products, bannerData }) => {
   const images = [

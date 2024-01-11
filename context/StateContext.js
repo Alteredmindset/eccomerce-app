@@ -17,7 +17,6 @@ export const StateContext = ({ children }) => {
   }
 
   const [showCart, setShowCart] = useState(false)
-  const [showMenu, setShowMenu] = useState(false)
   const [cartItems, setCartItems] = useState(getLocalStorage('cartItems'))
   const [totalPrice, setTotalPrice] = useState(getLocalStorage('totalPrice'))
   const [totalQuantities, setTotalQuantities] = useState(
@@ -119,8 +118,6 @@ export const StateContext = ({ children }) => {
     <Context.Provider
       value={{
         showCart,
-        setShowMenu,
-        showMenu,
         cartItems,
         totalQuantities,
         totalPrice,
