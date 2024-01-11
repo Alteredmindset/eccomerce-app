@@ -8,12 +8,12 @@ import {
 } from 'react-icons/ai'
 import { TiDeleteOutline } from 'react-icons/ti'
 import { toast } from 'react-hot-toast'
-
+import getStripe from '../lib/getStripe'
 import sanityClient from '@sanity/client'
 import { useStateContext } from '../context/StateContext'
-import { urlFor } from '../Lib/client'
+import { urlFor } from '../lib/client'
 import paypal from 'paypal-rest-sdk'
-import { client } from '../Lib/client'
+import { client } from '../lib/client'
 
 const Cart = () => {
   const cartRef = useRef()
