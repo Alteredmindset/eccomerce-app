@@ -6,8 +6,14 @@ import { VscAccount } from 'react-icons/vsc'
 import { Cart } from './'
 import { useStateContext } from '../context/StateContext'
 import SearchInput from './SearchInput'
+import NavigationMenu from './NavigationMenu'
 
 const Navbar = () => {
+  const [isMenuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen)
+  }
   const { showCart, setShowCart, totalQuantities } = useStateContext()
   const { user } = useUser()
 
@@ -28,7 +34,11 @@ const Navbar = () => {
       {!user && (
         <>
           <div className="auth-link1">
-            <VscAccount className='account-default' size={25} onClick={() => setShowDropdown(!showDropdown)} />{' '}
+            <VscAccount
+              className="account-default"
+              size={25}
+              onClick={() => setShowDropdown(!showDropdown)}
+            />{' '}
             {/* Toggle dropdown visibility */}
             {/* Dropdown for Sign In and Sign Up */}
             {showDropdown && (
@@ -44,6 +54,17 @@ const Navbar = () => {
           </div>
         </>
       )}
+
+      <div>
+        <button
+          className={`hamburger-button ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+        >
+          ☰
+        </button>
+        {isMenuOpen && <NavigationMenu onClose={toggleMenu} />}
+        {/* Your main content goes here */}
+      </div>
 
       <SearchInput />
       <button

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useStateContext } from '../context/StateContext'
-import { VscError } from 'react-icons/vsc'
 import Link from 'next/link'
 
-const Sidebarmenu = () => {
+
+const NavigationMenu = ({ onClose }) => {
   const { setShowMenu } = useStateContext()
   const [showSubMenu, setShowSubMenu] = useState(null)
   const [showSubSubMenu, setShowSubSubMenu] = useState(null)
@@ -17,16 +17,10 @@ const Sidebarmenu = () => {
   }
 
   return (
-    <div className="cart-wrapper1">
-      <div className="cart-container1">
-        <button
-          type="button"
-          className="cart-heading"
-          onClick={() => setShowMenu(false)}
-        >
-          <VscError />
-          <span className="cart-num-items">close</span>
-        </button>
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="navigation-menu" onClick={e => e.stopPropagation()}>
+        <button onClick={onClose}>Close</button>
+
         <div>
           <ul className="menu">
             <li>
@@ -549,4 +543,4 @@ const Sidebarmenu = () => {
   )
 }
 
-export default Sidebarmenu
+export default NavigationMenu

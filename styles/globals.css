@@ -31,6 +31,29 @@ a {
   padding: 10px;
 }
 
+/* global.css */
+
+.hamburger-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: -30px;
+  top: -10px;
+  font-size: 25px; /* Adjust the font size as needed */
+  padding: 10px;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.hamburger-button.active {
+  color: #3498db; /* Color when active */
+}
+
+/* Additional styling, if desired */
+/* .hamburger-button:hover {
+  transform: scale(1.1); // Example: Scale up on hover
+} */
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -101,6 +124,14 @@ span.text-red {
   text-align: center;
   font-weight: 600;
 }
+
+@media (max-width: 388px) {
+  .image-container {
+    position: relative;
+    left: -20px;
+  }
+}
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -225,7 +256,7 @@ span.text-red {
 }
 
 @media (max-width: 1024px) {
-  .footer-banner-container{
+  .footer-banner-container {
     display: none;
   }
 }
@@ -278,7 +309,7 @@ span.text-red {
   width: 100vw;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  right: 0;
+  
   top: 0;
   z-index: 100;
   /* will-change: transform; */
@@ -485,9 +516,8 @@ span.text-red {
   text-align: center;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
- 
+
   height: 300px;
-  
 }
 
 .product-detail-image {
@@ -898,9 +928,6 @@ span.text-red {
   border-radius: 50%;
   margin-inline: 10px;
 }
-.active {
-  background-color: #000000;
-}
 
 .indicator {
   display: flex;
@@ -921,8 +948,96 @@ span.text-red {
   position: relative;
   max-width: 100%;
   max-height: 100%;
-  margin-top: -50%;
+  margin-top: -20%;
   margin-left: -70%;
+}
+
+/* global.css */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Tinted shadow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999; /* Ensure the menu appears on top of other content */
+}
+
+.navigation-menu {
+  background-color: white; /* Add your preferred background color */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  width: 80vw; /* Adjust the width as needed for your medium rectangle */
+  max-width: 500px; /* Add a maximum width for responsiveness */
+  max-height: 60vh; /* Add a maximum height for responsiveness */
+  overflow-y: auto; /* Add scroll if content exceeds height */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.navigation-menu::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+}
+
+.navigation-menu::-webkit-scrollbar-thumb {
+  background-color: black; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners of the thumb */
+}
+
+.navigation-menu::-webkit-scrollbar-track {
+  background-color: white; /* Color of the track */
+  border-radius: 8px; /* Rounded corners of the track */
+}
+
+.navigation-menu button {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* global.css */
+
+/* ... Other styles ... */
+
+.navigation-menu .category h2,
+.navigation-menu .subcategory h2 {
+  font-size: 1.3em;
+  color: #3498db; /* Category text color */
+  margin-top: 20px;
+}
+
+.navigation-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navigation-menu li {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.navigation-menu a {
+  text-decoration: none;
+  color: #333; /* Link text color */
+  transition: color 0.3s ease-in-out;
+}
+
+.navigation-menu a:hover {
+  color: #3498db; /* Hover color */
+}
+
+/* Additional styles for subcategories */
+.navigation-menu .subcategory ul {
+  margin-left: 20px;
+}
+
+.navigation-menu .subcategory ul li {
+  font-size: 1.1em;
+  color: #555; /* Subcategory text color */
 }
 
 .logo {
@@ -1182,17 +1297,6 @@ code {
   font: inherit;
 }
 
-.hamburger-icon {
-  font-size: 30px;
-  color: rgb(0, 0, 0);
-  cursor: pointer;
-  position: relative;
-  transition: transform 0.4s ease;
-  border: none;
-  background-color: transparent;
-  top: 45px;
-}
-
 .cart-heading {
   display: flex;
   align-items: center;
@@ -1313,7 +1417,7 @@ code {
   height: auto;
   background-color: #000000;
   border-radius: 13px;
-  margin: 13px  0px 0px 0px;
+  margin: 13px 0px 0px 0px;
 }
 .footer .col {
   width: 190px;
@@ -1331,7 +1435,7 @@ code {
   font-size: 12px;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
-  color: #361bce ;
+  color: #361bce;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.25em;
