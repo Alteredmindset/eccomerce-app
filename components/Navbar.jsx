@@ -23,7 +23,11 @@ const Navbar = () => {
     <div className="navbar-container">
       <p className="logo">
         <Link href="/">
-          <img className="logolink" src="/images/ruggmobile.png" />
+          <img
+            className="logolink"
+            src="/images/ruggmobile-removebg-preview.png"
+            width={200}
+          />
         </Link>
       </p>
 

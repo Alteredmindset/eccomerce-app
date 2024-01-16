@@ -93,7 +93,7 @@ a {
 }
 
 span.text-red {
-  -webkit-text-stroke: 1px #2d40f0;
+  -webkit-text-stroke: 1px #efcf6b;
   margin-left: 6px;
 }
 .logo {
@@ -117,7 +117,7 @@ span.text-red {
   right: -8px;
   font-size: 12px;
   color: #eee;
-  background-color: #361bce;
+  background-color: #efcf6b;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -309,7 +309,7 @@ span.text-red {
   width: 100vw;
   background: rgba(0, 0, 0, 0.5);
   position: fixed;
-  
+
   top: 0;
   z-index: 100;
   /* will-change: transform; */
@@ -373,7 +373,7 @@ span.text-red {
 }
 .cart-num-items {
   margin-left: 10px;
-  color: #2d40f0;
+  color: #efcf6b;
 }
 .empty-cart {
   margin: 40px;
@@ -454,7 +454,7 @@ span.text-red {
   margin-top: 10px;
   margin-top: 40px;
   text-transform: uppercase;
-  background-color: #2d40f0;
+  background-color: #efcf6b;
   color: #fff;
   cursor: pointer;
   transform: scale(1, 1);
@@ -530,7 +530,7 @@ span.text-red {
   transition: 0.3s ease-in-out;
 }
 .product-detail-image:hover {
-  background-color: #2d40f0;
+  background-color: #efcf6b;
 }
 .small-images-container {
   display: flex;
@@ -561,6 +561,7 @@ span.text-red {
 }
 .product-detail-desc p {
   margin-top: 10px;
+  text-wrap: balance;
 }
 .reviews p {
   color: #324d67;
@@ -949,7 +950,7 @@ span.text-red {
   max-width: 100%;
   max-height: 100%;
   margin-top: -20%;
-  margin-left: -70%;
+  margin-left: -60%;
 }
 
 /* global.css */
@@ -1092,13 +1093,13 @@ span.text-red {
 
 #search-menu .wrapper input:focus {
   outline: none;
-  border-color: #361bce;
+  border-color: #efcf6b;
 }
 
 #search-menu .wrapper button {
   margin-top: 1em;
   padding: 1em 1em;
-  background: #361bce; /* Purple background */
+  background: #efcf6b; /* Purple background */
   border: none;
   border-radius: 5px;
   color: #ffffff; /* White text color */
@@ -1108,7 +1109,7 @@ span.text-red {
 }
 
 #search-menu .wrapper button:hover {
-  background-color: #2a147a; /* Darker purple on hover */
+  background-color: #f8c21f;
 }
 
 #search-menu .wrapper button:focus {
@@ -1126,7 +1127,7 @@ span.text-red {
 }
 
 #search-icon:hover {
-  color: #361bce;
+  color: #efcf6b;
 }
 
 .add-to-cart {
@@ -1435,7 +1436,7 @@ code {
   font-size: 12px;
   line-height: 17px;
   padding: 20px 0px 5px 0px;
-  color: #361bce;
+  color: #efcf6b;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 0.25em;
